@@ -28,7 +28,7 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
-    if [ ! "$1" = "nondestructive" ] ; then
+    if [ ! "${1:-}" = "nondestructive" ] ; then
     # Self destruct!
         unset -f deactivate
     fi
@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Doka PC\Desktop\Warning\Projects\Fatec\projeto-integrador\speech-recognition-test"
+VIRTUAL_ENV="D:\Main\Project\Fatec\projeto-integrador\tests\speech-recognition-py"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,8 +54,8 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    if [ "x(speech-recognition-test) " != x ] ; then
-	PS1="(speech-recognition-test) ${PS1:-}"
+    if [ "x(speech-recognition-py) " != x ] ; then
+	PS1="(speech-recognition-py) ${PS1:-}"
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories

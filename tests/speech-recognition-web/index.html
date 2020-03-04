@@ -2,30 +2,11 @@
 <html>
     <head>
     </head>
-    <script>
-
-        const sr = new webkitSpeechRecognition();
-        sr.lang = "pt-BR";
-        sr.onspeechstart = function() {
-            console.log('AAAA')
-            console.log("Detecting sounds");
-        }
-
-        sr.onsoundend = function() {
-            console.log("Sound stops");
-        }
-
-        sr.onresult = function(e) {
-            console.log(e)
-        }
-
-        function speechRecogn(e) {
-            console.log(sr);
-            sr.start();
-        }
-
-    </script>
     <body>
-        <button onclick="speechRecogn()">Clica em mim!</button>
+        <button id="btnReco">Clica em mim!</button>
+        <div id="txtResponse" style="background-color: black; color: white"><p>Aqui é onde vai aparecer o texto</p></div>
+        <div id="txtLog" style="position: absolute; left: 0; bottom: 0; font-size: 2em; background-color: bisque; width: 100%;">Texto</div>
+   
+        <script src="main.js"></script>
     </body>
 </html>
